@@ -406,7 +406,7 @@ printf "\n"
 
 # wait untill the settlement is done
 printf "\nWaiting for XRP ledger to be validated"
-wait_to_get_http_response_body '{"asset_code":"XRP","balance":0.0}' 20 -H "Authorization: Bearer alice_password" "http://localhost:8770/accounts/alice/balance" || error_and_exit "Could not confirm settlement."
+wait_to_get_http_response_body '{"asset_code":"XRP","balance":0.0}' 10 -H "Authorization: Bearer alice_password" "http://localhost:8770/accounts/alice/balance" || error_and_exit "Could not confirm settlement."
 printf "done\n"
 -->
 
